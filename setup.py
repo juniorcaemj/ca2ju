@@ -6,5 +6,5 @@ setup(name='CA2JU Ilustrado',
       author='Junior Mendonca',
       author_email='juniorcaemj@gmail.com',
       url='http://www.python.org/',
-      #install_requires=['web.py','nltk','virtualenv'],
+      install_requires=['web.py','nltk','virtualenv'],
      )
