@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo " -----> Running Django database table migrations."
+
+python $OPENSHIFT_REPO_DIR/wsgi/myproject/manage.py migrate --noinput
+
+if [ ! -f $OPENSHIFT_DATA_DIR/secrets.json ]; then
+    echo " -----> Create secrets for Django settings module."
+    python $OPENSHIFT_REPO_DIR/libs/secrets.py > $OPENSHIFT_DATA_DIR/secrets.json
+fi
