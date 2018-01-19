@@ -1,6 +1,7 @@
 ﻿#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import os
+import sys
 
 #virtenv = os.environ['APPDIR'] + '/virtenv/'
 virtenv = '/opt/app-root/src/virtenv/'
@@ -18,7 +19,6 @@ except IOError:
 # 
 import web
 import nltk
-import sys
 import urllib
 import pickle
 import random
