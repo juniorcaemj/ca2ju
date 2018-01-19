@@ -6,7 +6,7 @@ import sys
 #virtenv = os.environ['APPDIR'] + '/virtenv/'
 virtenv = '/opt/app-root/src/virtenv/'
 #os.environ['PYTHON_EGG_CACHE'] = os.path.join(virtenv, 'lib/python2.6/site-packages')
-os.environ['PYTHON_EGG_CACHE'] = get_python_lib()
+#os.environ['PYTHON_EGG_CACHE'] = get_python_lib()
 virtualenv = os.path.join(virtenv, 'bin/activate_this.py')
 try:
     execfile(virtualenv, dict(__file__=virtualenv))
