@@ -687,7 +687,6 @@ application = web.application(urls, globals()).wsgifunc()
 #
 if __name__ == '__main__':
 	from wsgiref.simple_server import make_server
-	raise('Chegou aqui')
 	httpd = make_server('localhost', 8080, application)
 	# Wait for a single request, serve it and quit.
 	httpd.serve_forever()
