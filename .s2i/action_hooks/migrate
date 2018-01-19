@@ -1,5 +1,0 @@
-#!/bin/bash
-
-echo " -----> Running Django database table migrations."
-
-python $OPENSHIFT_REPO_DIR/wsgi/myproject/manage.py migrate --noinput

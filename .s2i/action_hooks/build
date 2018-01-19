@@ -1,5 +1,0 @@
-#!/bin/bash
-
-echo " -----> Running collection of Django static resources."
-
-python $OPENSHIFT_REPO_DIR/wsgi/myproject/manage.py collectstatic --noinput

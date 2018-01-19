@@ -1,5 +1,0 @@
-#!/bin/bash
-
-pip install --no-cache-dir powershift-cli[image]
-
-exec powershift image assemble
