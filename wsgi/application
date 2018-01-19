@@ -679,6 +679,7 @@ palavras_stem = {'a':'A.png','A':'A.png','B':'B.png','C':'C.png','D':'D.png','E'
 }
 		
 application = web.application(urls, globals()).wsgifunc()
+application.run()
 
 #
 # Below for testing only
