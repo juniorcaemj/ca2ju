@@ -1,0 +1,83 @@
+(dp0
+VMenina mercado não dinheiro
+p1
+(lp2
+Vmenina.png
+p3
+aVmercado.png
+p4
+aVnao.png
+p5
+aVdinheiro.png
+p6
+asVSente perto porque conversar você.
+p7
+(lp8
+Vsentimentos.png
+p9
+aVperto.png
+p10
+aVporque.png
+p11
+aVconversar.png
+p12
+aVvoce.png
+p13
+asVA menina menina a menina a
+p14
+(lp15
+Vmenina.png
+p16
+aVmenina.png
+p17
+asVA menina foi para o mercado mas não tinha dinheiro
+p18
+(lp19
+Vmenina.png
+p20
+aVmercado.png
+p21
+aVnao.png
+p22
+aVdinheiro.png
+p23
+asVSente aqui do meu lado porque quero conversar com você.
+p24
+(lp25
+Vsentar_6.png
+p26
+aVperto.png
+p27
+aVporque.png
+p28
+aVconversar.png
+p29
+aVvoce.png
+p30
+asVMe azul amarela pintar bandeira.
+p31
+(lp32
+Vme.png
+p33
+aVazul.png
+p34
+aVamarela.png
+p35
+aVpintar.png
+p36
+aVbandeira.png
+p37
+asVMe dê tinta azul e amarela para pintar a bandeira.
+p38
+(lp39
+Vme.png
+p40
+aVazul.png
+p41
+aVamarela.png
+p42
+aVpintar.png
+p43
+aVbandeira.png
+p44
+as.

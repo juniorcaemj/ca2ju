@@ -1,0 +1,15 @@
+Ver LOG: rhc app tail -a yourappname -l youremail -p yourpassword
+
+- Dar commit:   git add --all 
+	        git commit -m "Mensagem"
+		git push
+
+- Definir variáveis de ambiente: rhc set-env VARIAVEL=VALOR -a app --namespace nome_do_namespace
+
+Ex: rhc set-env NLTK_DATA= -a app --namespace nome_do_namespace
+
+- Reiniciar serviço: rhc app-restart
+
+- Verificar espaço do serviço: rhc app show appname --gears quota
+
+// rhc set-env NLTK_DATA=/var/lib/openshift/545ab1b35973caffd1000081/app-root/repo -a ca2ju --namespace acelerado

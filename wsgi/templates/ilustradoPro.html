@@ -1,0 +1,176 @@
+$def with (frase,legendaimg,simbolos,estado,flag,palavras,propriedades)
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
+<head>
+    <title>Suíte de aplicativos CA²JU</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" href="../static/src/img/_favicon.png"/>
+    <link rel="stylesheet" type="text/css" href="../static/src/estilo_ilustradoPro.css">
+    <link rel="stylesheet" type="text/css" href="../static/src/jquery-ui-1.10.4/css/ui-lightness/jquery-ui-1.10.4.custom.css">
+    <link rel="stylesheet" type="text/css" href="../static/src/jquery-ui-1.10.4/css/ui-lightness/jquery-ui-1.10.4.custom.min.css">
+    <!--<script type="text/javascript" language="javascript" src="./static/src/jquery.js"></script>
+    <script type="text/javascript" src="./static/src/jquery.min.js"></script>
+    <script type="text/javascript" src="./static/src/jquery-1.11.1.min.js"></script>-->
+    <script type="text/javascript" src="./static/src/jquery-ui-1.10.4/jquery-1.10.2.js"></script>
+        <script type="text/javascript" src="./static/src/jquery-ui-1.10.4/jquery-ui-1.10.4.js"></script>
+            <script type="text/javascript" src="./static/src/jquery-ui-1.10.4/jquery-ui-1.10.4.min.js"></script>
+    <script type="text/javascript" src="./static/src/jquery.timer.js"></script>
+    <!--<script type="text/javascript" src="./static/src/SpryAssets/SpryEffects.js" ></script>-->
+    <script type="text/javascript" defer="defer" src="./static/src/ilustradoPro.js"></script>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-80986853-2', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+    <script type="text/javascript" defer="defer" id ="./static/src/sprincipal" >
+		/*jQuery(function () {
+		jQuery("td").click(function () {
+			var OriginalContent = jQuery(this).text();
+			 
+			jQuery(this).addClass("cellEditing");
+			jQuery(this).html("<input type='text' value='" + OriginalContent + "' />");
+			jQuery(this).children().first().focus();
+	 
+			jQuery(this).children().first().keypress(function (e) {
+				if (e.which == 13) {
+					var newContent = jQuery(this).val();
+					jQuery(this).parent().text(newContent);
+					jQuery(this).parent().removeClass("cellEditing");
+				}
+			});
+			 
+		jQuery(this).children().first().blur(function(){
+			jQuery(this).parent().text(OriginalContent);
+			jQuery(this).parent().removeClass("cellEditing");
+		});
+		});
+	});*/
+	document.oncontextmenu = new Function("return false;");	
+	
+	function imprimir(){
+		var conteudo = document.getElementById('simbolos_ou_previsao').innerHTML,
+		tela_impressao = window.open('Símbolos Pictográficos - CA2JU Ilustrado');
+
+		tela_impressao.document.write(conteudo);
+		tela_impressao.window.print();
+		tela_impressao.window.close();
+	}
+	
+	var entidades = ["Organização","Pessoa","Data"];
+	var pos_tag = ["Artigo","Pronome","Verbo","Substantivo","Adjetivo","Conjunção","Interjeição"];
+	
+	jQuery(function () {
+		jQuery("#t_entidade1").autocomplete({source: entidades,messages: {
+        noResults: '',
+        results: function() {}}});
+		jQuery("#t_classe").autocomplete({source: pos_tag,messages: {
+        noResults: '',
+        results: function() {}
+    }});
+	});
+    </script>
+</head>
+<body>
+   	<div id='pagina'>
+    	  <header>
+          <div id="logo">
+            <ul>
+              <a href="/"><li id="e10"><img id="logo" src="../static/src/img/_logo.png" width="20" height="25" />CA²JU</li></a>
+              <img id="beta" src="../static/src/img/_fig_beta.png" width="30" height="18" />
+            </ul>
+          </div>
+          <nav id="menu">
+                <ul>
+                     <a href="http://ca2ju-acelerado.rhcloud.com/acelerado"><li id="e1" onClick='eventoCelula1()'><img id="img_prev" src="../static/src/img/_fig_previsao.png" width="15" height="15" />CA²JU Acelerado</li></a>
+                     <a href="ilustrado"><li id="e2" onClick='eventoCelula2()'><img id="img_ilus" src="../static/src/img/_fig_ilustrado.png" width="10" height="20" />CA²JU Ilustrado</li></a>
+                     <a href="ilustradoPro"><li id="e3"><img id="img_ilus" src="../static/src/img/_fig_ilustrado.png" width="10" height="20" />CA²JU Ilustrado Pro</li></a>
+                     <a href="ilustrado2"><li id="e4"><img id="img_ilus" src="../static/src/img/_fig_ilustrado.png" width="10" height="20" />CA²JU</li></a>
+					 <a href="http://ca2ju-escrito.rhcloud.com/escrito"><li id="e5" onclick="eventoCelula4()"><img id="img_ilus" src="../static/src/img/_fig_previsao.png" height="20" width="15">CA²JU Escrito</li></a>
+                </ul>
+                <img id="img_texto" src="../static/src/img/_fig_texto.png" width="25" height="25" />
+                <div id='area_texto'>
+            		<form method="post" action="ilustradoPro"><input name="caixa1" type='text' id='caixa1' value="$frase" size='95'/>
+                    <button id="b_gerar" action="ilustradoPro"><img src='../static/src/img/_check.png' width='14' height='14'/>   Gerar</button></form>
+            	</div>
+          </nav>
+          </header>
+      <div id="simbolos_ou_previsao" class="simbolos_ou_previsao" align="center">
+          	$if frase != "":
+				$for x in range(0,len(simbolos)):
+					<div class="simb_norm" id='$x' oncontextmenu="alterar_simbolo($x)" onclick='click_simb(this,$len(simbolos),$x)' style="display:inline-block;"><a>$legendaimg[x]<br /><img name='$legendaimg[x]' id="img_$x" src="http://data-ilustrado.rhcloud.com/wp-content/uploads/2014/06/$simbolos[x]" width="100" height="100" align="middle"/></a></div>	
+ 	  </div>
+      <div id='barra_erro'>
+            $if frase != "" and flag == 1:
+            	<div id='botoes'>
+                <button id="b_salvar" onclick="salvar_simbolos()"><img src='http://ca2ju-ilustrado.rhcloud.com/static/src/img/_salvar.png' width='17' height='17'/> Salvar</button>
+                <button id="b_Erro" onclick="reportErro()"><img src='../static/src/img/_bug.png' width='15' height='15'/> Reportar erro</button>
+                </div>
+            <div id='alterar_simbolo'>
+            <input name="pesquisa" type="text" onclick="document.getElementById('pesquisa').value='';" id="pesquisa" o value="Digite o nome do símbolo"/>
+            <div id='botoes_alterar'>
+              <img src="../static/src/img/pesquisa.png" onclick='mostrar_simb(document.getElementById("pesquisa").value)' width="24" height="24"/>
+              <img src="../static/src/img/trocar.jpg" onclick='trocar_simbolo(document.getElementById("pesquisa").value)' width="23" height="23"/>
+              <img src="../static/src/img/remover.png" onclick='remover_simbolo()' title="Remover Símbolo Atual" width="23" height="23"/>
+            </div>
+            <div id='pictograma'>
+          
+            </div>
+            <button id="b_editar" onclick='mudar_simbolo()'><img src='../static/src/img/_edit.png' width='14' height='14'/> Alterar</button></form>
+            <button id="b_cancelar" onclick='cancelar_alteracao()'><img src='../static/src/img/_cancel.png' width='14' height='14'/> Cancelar</button></form>
+            </div>
+      </div>
+      <div id="bottom">
+      <div id='barra_prop'>
+      	<div id="barra2"></div>
+      </div>
+      <div id="barra2"></div>
+      <button id="b_Imprimir" onclick="imprimir()"><img src='../static/src/img/_imprimir.png' width='15' height='15'/> Imprimir</button>
+      <h2 align='center'>Propriedades</h2>
+      <div id="prop_simbolos">
+      <table width="40%" border="1" align='center' cellpadding="1" cellspacing="1" id="tabela_prop" class="editableTable">
+          <tr>
+            <th width="176" id='c_palavra' scope="row">Palavra</th>
+            <td width="209"><input id='t_palavra' readonly="readonly" class='input_tabela' />&nbsp;</td></td>
+          </tr>
+          <tr>
+            <th id='c_classe' scope="row">Classe de palavra</th>
+            <td ><input id='t_classe' class='input_tabela' />&nbsp;</td>
+          </tr>
+          <tr>
+            <th id='c_sinonimos' scope="row">Sinônimos</th>
+            <td ><input id='t_sinonimos' class='input_tabela' />&nbsp;</td>
+          </tr>
+          <tr>
+            <th id='c_entidade1' scope="row">Entidade</th>
+            <td ><input id='t_entidade1' class='input_tabela' />&nbsp;</td>
+          </tr>
+          <!--<tr>
+            <th id='add' scope="row" onclick="add_linha();"><input id='add' class='input_tabela' value="Add" /></th>
+            <td><input id='t_add' class='input_tabela' />&nbsp;</td>
+          </tr>-->
+        </table>
+      <!--<div id='botoes_prop_A'> <button id="OK" onclick="botao_alterar();"><img src='../static/src/img/_edit.png' width='15' height='15'/> Alterar </button></div>-->
+      </div>
+      <div id='botoes_prop_OC'> <button id="OK" onclick="botao_O();"><img src='../static/src/img/_check.png' width='15' height='15'/> Salvar </button>
+      <button id="Cancelar" onclick="botao_C();"><img src='../static/src/img/_cancel.png' width='15' height='15'/> Cancelar</button></div>
+      </div>
+         </div>
+     </div>
+         <div id='copyright'> © Todos os direitos reservados</div>
+    <div id='007'>
+    	$if len(palavras) != 0:
+        	$for i in xrange(0,len(palavras)):
+	        	<input name='007p$i' style="visibility:hidden" id='007p$i' value='$palavras[i]' />
+           	$for i in xrange(0,len(palavras)):
+	            $for j in xrange(0,len(propriedades[i])):
+                	<input name='007p$(i)pr$(j)' style="visibility:hidden" id='007p$(i)pr$(j)' value='$propriedades[i][j]' />
+    </div>
+    </body>
+</html>

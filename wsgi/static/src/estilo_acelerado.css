@@ -1,0 +1,408 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 20/05/2014, 20:34:03
+    Author     : Junior, Flavio
+*/
+
+body{
+	background-color: #D8DADE;
+	font-family: Arial,Helvetica,Freesans,sans-serif;
+	/*font-family: Arial, sans-serif;*/
+}
+
+header {
+	width: 995px;
+	background-color: #E9E9E9;
+	box-shadow: 0px 1px 0px #CCC;
+}
+
+#pagina {
+	position: relative;
+	background-color: #ffffff;
+	width: 995px;
+	box-shadow: 0px 0px 1px rgba(0,0,0,.5);
+	height: 598px;
+	margin-top: 55px;
+	margin-right: auto;
+	margin-bottom: auto;
+	margin-left: auto;
+}
+
+/* Formatação do logo */ 
+
+div#logo{
+	display: block;
+}
+
+div#logo img#logo{
+	margin-right: 5px;
+}
+
+div#logo img#beta{
+	display: block;
+	position: absolute;
+	margin: -40px auto auto 135px;
+}
+
+div#logo ul{
+	position: absolute;
+	left: -30px;
+	top: -46px;
+	list-style: none;
+	font-family:Arial, sans-serif;
+	position:absolute;
+}
+
+div#logo li{
+	color: #FBFBFB;
+	/*text-shadow: 1px 0px 0px black, 
+			 -1px 0px 0px black, 
+			 0px 1px 0px black, 
+			 0px -1px 0px black;*/
+	font-weight: bold;
+	font-size: 22pt;
+	display: inline-block;
+	/*background-color:#dddddd;*/
+	padding: 6px 20px 4px 15px;
+	margin: -14px auto auto -3px;
+	transition: background-color 1s;
+	text-shadow: -2px 0px 1px #BFBFBF,0px -2px 1px #BFBFBF,2px 0px 1px #BFBFBF,0px 2px 1px #BFBFBF;
+}
+
+div#logo li:hover{
+	/*background-color: #E4E4E4;*/
+	transition:background-color 1s;
+	border-radius: 5px;
+	/*text-shadow: 0px 0px 1px black;*/
+	/*border-bottom: 5px #FFFFFF solid;
+	border-bottom-left-radius: 1px;
+	border-bottom-right-radius: 1px;
+	border-bottom-width:5px;*/
+}
+
+div#area_texto {
+	margin-top: -36px;
+	padding: 1px;
+	font-size: 9px;
+}
+
+#img_texto{
+	position: absolute;
+	margin: -34px auto auto 115px;/
+}
+
+div#area_texto input{
+	margin: auto auto 25px 150px;
+	border-style: groove;
+	border-radius: 50px;
+}
+
+#caixa1{
+	padding-left: 7px;
+}
+
+#lista_previsao{
+	border-radius: 10px;
+	position: relative;
+	display:inline-block;
+}
+
+/* Formatação do menu */ 
+
+nav#menu{
+	display:block;
+	height: 45px;
+}
+
+nav#menu ul{
+	position:absolute;
+	top: -40px;
+	left: 75px;
+	height: 44px;
+	list-style: none;
+	font-family: Arial, sans-serif;
+	position: relative;
+	/*margin: 0px 0px 0px 220px;*/
+	/*padding: auto 20px auto 20px;*/
+	margin: -10px 200px auto 200px;
+}
+
+nav#menu img#img_ilus{
+	margin-top: 2px;
+	margin-right: 5px;
+	margin-bottom: -3px;
+}
+
+nav#menu img#img_prev{
+	padding-top: 3.25px;
+	margin-top: 2px;
+	margin-right: 5px;
+	margin-bottom: -1px;
+}
+
+nav#menu li{
+	display: inline-block;
+	background-color: #CDCDCD;
+	/*padding: 14px 40px 10.5px 40px;*/
+	padding: 10.25px;
+	padding-top: 6px;
+	padding-bottom: 11.75px;
+	padding-left: 15px;
+	margin: -1px 12px 8px 7px;
+	transition: background-color 0.3s;
+	/*border-radius: 5px 5px 0px 0px;*/
+	border-radius: 10px 10px 0px 0px;
+	border-bottom-style: hidden;
+	box-shadow: -0.5px 0px 1px #9E9E9E,0.5px 0px 1px #9E9E9E,0px -0.5px 1px #9E9E9E;	
+	/*box-shadow: 0 -4px 2px -4px #606060 , -4px 0 2px -4px #606060, 4px 0 2px -4px #606060;*/
+}
+
+nav#menu li:hover{
+	/*background-color: #999;*/
+	/*background-color: #69F;*/
+	background-color: #E9E9E9;
+	box-shadow: 0px -3px 3px -4px #606060 ,-4.5px 0px 3px -4px #606060, 4.5px 0px 3px -4px #606060;
+	/*background-color: #dddddd;*/
+}
+
+nav#menu li#e1{
+	padding-top: 6px;
+	background-color: #E9E9E9;
+	box-shadow: 0px -3px 3px -4px #606060 ,-4.5px 0px 3px -4px #606060, 4.5px 0px 3px -4px #606060;
+}
+
+nav#menu a{
+	color: #000;
+}
+
+#corpo {
+	position: relative;
+	alignment-adjust: middle;
+	margin: auto;
+}
+
+
+#ListPrevisao{
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.colunas {
+	/*height: 10px;*/
+	margin: 5px 10px 0px 10px;
+	border-style:hidden;
+	border-radius: 50px;
+}
+
+#p10{
+	font-size: 12pt;
+	background-color: #DDDDDD;
+	color: #000000;
+	text-align:center;
+	display: block;
+	position:absolute;
+	margin-top: -68px;
+	margin-left: 815px;
+	margin-right: 20px;
+	border-radius: 50px;
+	border-style: groove;
+}
+
+.palavras {
+	font-size: 12pt;
+	text-align: left;
+	padding-left: 7px;
+	color: #C1C1C1;
+	margin: 1px 10px 0px 10px;
+	border-radius: 50px;
+	border-style: groove;
+}
+
+.palavras_pintadas{
+	font-size: 12pt;
+	text-align: left;
+	padding-left: 7px;
+	color: #C1C1C1;
+	margin: 1px 10px 0px 10px;
+	border-radius: 50px;
+	border-style: groove;
+	background-color: #FFFF00;
+}
+
+#teclado_container {
+	position: relative;
+	display: block;
+}
+ 
+#teclado{
+	width: 61.5%;
+	border-style: groove;
+	border-color:#DDDDDD;
+	/*background-color: #C0C0C0;*/
+	background-color: #BABABC;
+	/*height: 100%;*/
+	position: relative;
+	margin: 0px 136px 0px 190px;
+	bottom: -14px;
+	display: block;
+	color: #333;	
+}
+
+#sombra{
+	z-index: 1;
+	display: none;
+	position: absolute;
+	width: 614px;
+	height: 230px;
+	margin-left: 192px;
+	margin-top: 16px;
+	background-color: rgba(0,0,0,0.5);
+}
+
+#estado007{
+	visibility:hidden;
+	position: absolute;
+}
+
+ .botao_pintado{
+     font-size: 20px;
+     /*color: #0000FF;*/
+	 background-color: #FFFF00;
+	 color: #000;
+     width: 50px;
+     height: 40px;
+	 /*padding: 20px auto auto 20px;*/
+     border-radius: 5px;
+     border-bottom-style: groove;
+     margin: 3px 3px 3px 4px;
+ }
+ 
+
+
+#acentos {
+	z-index: 1000;
+	bottom: 80px;
+	left: 310px;
+	display: none;
+	position: absolute;
+	background-color: #FFF;
+	border: 1px solid #ededed;
+	border-radius: 2px;
+	outline: 0;
+	-webkit-font-smoothing: antialiased;
+	box-shadow: 0 3px 14px #444;
+}
+
+.botao{
+     font-size: 20px;
+     /*color: #0000FF;*/
+	 background-color: #EBECEE;
+	 color: #000;
+     width: 50px;
+     height: 40px;
+	 /*padding: 20px auto auto 20px;*/
+     border-radius: 5px;
+     border-bottom-style: groove;
+     margin: 3px 3px 3px 4px;
+ }
+ 
+input {
+	height: 25px;
+}
+
+.tabelaprevisao{
+	width:400px;
+}
+
+#lista_previsao{
+	margin-top: 5px;
+	margin-left: -25px;
+	width: 100%;
+	position: relative;
+}
+
+#simbolos_ou_previsao{
+	height: 155px;
+	margin-left: 15px;
+	margin-top: 12px;
+}
+
+h3{
+	color: #616161;
+}
+
+a.teste{
+    background-color: white; 
+    border-bottom-style:groove;
+    border-bottom-color: black;
+    border-top-style:groove;
+    border-top-color: black;
+    border-right-style: groove;
+    border-right-color: black;
+    border-left-style: groove;
+    border-left-color: black;
+    border-width: thin;
+}
+
+.tabelaclass{
+    table-layout: fixed;
+    border-spacing: 0;
+}
+
+.teste3{
+    border-width: thin;
+    background-color: white;
+    border-top-style:groove;
+    border-top-color: black;
+    border-bottom-color: white;
+    border-right-style: groove;
+    border-right-color: black;
+    border-left-style: groove;
+    border-left-color: black;
+    
+}
+
+#p1{
+	border-top-color: white;
+	}
+
+td{
+     width:200px;
+     height: 30px;
+     font-size: 20px;
+}
+
+#teste {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12%;
+	background-color: #000;
+}
+
+#barra1 {
+	margin-top: 12px;
+	width: 100%;
+	background-color: #CCC;
+	height: 1px;
+}
+
+#barra2 {
+	margin-top: 0px;
+	width: 100%;
+	background-color: #CCC;
+	height: 1px;
+}
+
+#bar_inferior {
+	height: 20px;
+	background-color: #FFF;
+	padding: 10px auto auto auto;
+}
+
+#copyright{
+	text-align:center;
+	margin: 10px auto auto auto;
+}

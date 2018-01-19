@@ -1,0 +1,237 @@
+$def with (frase,legendaimg,simbolos,estado,flag)
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
+<head>
+    <title>Suíte de aplicativos CA²JU</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" href="http://data-ilustrado.rhcloud.com/wp-content/uploads/2014/06/favicon.png"/>
+    <link rel="stylesheet" type="text/css" href="../static/src/estilo_ilustrado.css">
+    <link rel="stylesheet" type="text/css" href="../static/src/jquery-ui-1.10.4/css/ui-lightness/jquery-ui-1.10.4.custom.css">
+    <link rel="stylesheet" type="text/css" href="../static/src/jquery-ui-1.10.4/css/ui-lightness/jquery-ui-1.10.4.custom.min.css">
+    <script type="text/javascript" src="./static/src/jquery.js"></script>
+    <script type="text/javascript" src="./static/src/jquery.min.js"></script>
+    <script type="text/javascript" src="./static/src/jquery.timer.js"></script>
+<!-- <script type="text/javascript" src="./static/src/jquery-ui-1.10.4/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="./static/src/jquery-ui-1.10.4/jquery-ui-1.10.4.js"></script>
+    <!--<script type="text/javascript" src="./static/src/jquery-ui-1.10.4/jquery-ui-1.10.4.min.js"></script>-->
+    <!--<script type="text/javascript" src="./static/src/SpryAssets/SpryEffects.js" ></script>-->
+    <script type="text/javascript" defer="defer" src="./static/src/ilustrado.js"></script>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-80986853-2', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+    <script type="text/javascript" defer="defer" id ="./static/src/sprincipal" >
+	
+	var semaforo = 1;
+	
+			function eventoCelula1 () {			
+				window.location = "acelerado";							
+			}
+			function eventoCelula2 () {			
+				window.location = "ilustrado";
+			}
+			
+			// Aqui entra o código quando clica com o esquerdo
+			function click(){
+				if(document.getElementById('teclado_checkbox').checked == true){
+					if (semaforo == 1){
+						semaforo = 0;
+						pause();
+					}
+					semaforo = 1;
+				}
+			}
+			
+			// Aqui entra o código quando clica com o direito
+			function dbclick(){
+				if(document.getElementById('teclado_checkbox').checked == true){
+					if (semaforo == 1){
+						semaforo = 0;
+						oncontextmenu='return false';
+						dir();
+					}
+					semaforo = 1;
+				}
+			}
+			
+			function imprimir(){
+				for(var x = 0; x < document.getElementsByClassName("w_ent").length; x++){
+					document.getElementsByClassName("w_ent").item(x).style.visibility = "hidden";
+				}
+				var conteudo = document.getElementById('simbolos_ou_previsao').innerHTML;
+			    tela_impressao = window.open('Símbolos Pictográficos - CA2JU Ilustrado');
+
+				tela_impressao.document.write(conteudo);
+				tela_impressao.window.print();
+				tela_impressao.window.close();
+				for(var x = 0; x < document.getElementsByClassName("w_ent").length; x++){
+					document.getElementsByClassName("w_ent").item(x).style.visibility = "visible";
+				}
+			}
+			
+			document.oncontextmenu = new Function("return false;");
+				/*window.captureEvents(Event.CLICK);
+				document.onmousedown=click;
+				document.oncontextmenu = new Function("return false;")*/
+				// add event listener to table
+				/*var e1 = document.getElementById('corpo');
+				e1.addEventListener("click", click, false);
+				var e2 = document.getElementById('simbolos_ou_previsao');
+				e2.addEventListener("click", click, false);
+				var e3 = document.getElementById('bottom');
+				e3.addEventListener("click", click, false);*/
+    </script>
+</head>
+<body>
+   	<div id='pagina'>
+    	  <header>
+          <div id="logo">
+            <ul>
+              <a href="/"><li id="e10"><img id="logo" src="../static/src/img/_logo.png" width="20" height="25" />CA²JU</li></a>
+              <img id="beta" src="../static/src/img/_fig_beta.png" width="30" height="18" />
+            </ul>
+          </div>
+          <nav id="menu">
+                <ul>
+                     <a href="http://ca2ju-acelerado.rhcloud.com/acelerado"><li id="e1" onClick='eventoCelula1()'><img id="img_prev" src="../static/src/img/_fig_previsao.png" width="15" height="15" />CA²JU Acelerado</li></a>
+                     <a href="ilustrado"><li id="e2" onClick='eventoCelula2()'><img id="img_ilus" src="../static/src/img/_fig_ilustrado.png" width="10" height="20" />CA²JU Ilustrado</li></a>
+                     <a href="ilustradoPro"><li id="e3"><img id="img_ilus" src="../static/src/img/_fig_ilustrado.png" width="10" height="20" />CA²JU Ilustrado Pro</li></a>
+                     <a href="ilustrado2"><li id="e4"><img id="img_ilus" src="../static/src/img/_fig_ilustrado.png" width="10" height="20" />CA²JU</li></a>
+					 <a href="http://ca2ju-escrito.rhcloud.com/escrito"><li id="e5" onclick="eventoCelula4()"><img id="img_ilus" src="../static/src/img/_fig_previsao.png" height="20" width="15">CA²JU Escrito</li></a>
+                </ul>
+                <img id="img_texto" src="../static/src/img/_fig_texto.png" width="25" height="25" />
+                <div id='area_texto'>
+            		<form method="post" action="ilustrado"><input name="caixa1" type='text' id='caixa1' value="$frase" size='110'/></form>
+            	</div>
+          </nav>
+          </header>
+          <div id='corpo' align="center">
+          <div id='lista_previsao'>
+          	<div class="colunas" id="col1">
+              <input name="p1" type="text" class="palavras" id="p1" value="palavra 1" readonly="readonly" />
+              <input name="p4" type="text" class="palavras" id="p4" value="palavra 4" readonly="readonly" />
+              <input name="p7" type="text" class="palavras" id="p7" value="palavra 7" readonly="readonly" />
+            </div>
+            <div class="colunas" id="col2">
+              <input name="p2" type="text" class="palavras" id="p2" value="palavra 2" readonly="readonly" />
+              <input name="p5" type="text" class="palavras" id="p5" value="palavra 5" readonly="readonly" />
+              <input name="p8" type="text" class="palavras" id="p8" value="palavra 8" readonly="readonly" />
+            </div>
+           <div class="colunas" id="col3">
+       	     <input name="p3" type="text" class="palavras" id="p3" value="palavra 3" readonly="readonly" />
+             <input name="p6" type="text" class="palavras" id="p6" value="palavra 6" readonly="readonly" />
+             <input name="p9" type="text" class="palavras" id="p9" value="palavra 9" readonly="readonly" />
+           </div>
+           <input name="p10" type="text" id="p10" value="Voltar ao Teclado" maxlength="15" readonly="readonly" />
+           <input name="estado007" type='text' id='estado007' value='$estado' size='87' />
+          </div>
+          <div id="barra1"></div>
+          </div>
+      <div id="simbolos_ou_previsao" class="simbolos_ou_previsao" align="center">
+          	$if frase != "":
+					$for x in range(0,len(simbolos)):
+						<div id='$x' class="simb_norm" oncontextmenu="alterar_simbolo($x)" style="display:inline-block;"><a><var class="w_ent" style="font-style:normal">$legendaimg[x]</var><br /><img id='img_$x' name="$legendaimg[x]" src="http://data-ilustrado.rhcloud.com/wp-content/uploads/2014/06/$simbolos[x]" width="100" height="100" align="middle"/></a></div>
+				
+ 	      </div>
+	  <div id='alterar_simbolo'>
+      <input name="pesquisa" type="text" onclick="document.getElementById('pesquisa').value='';" id="pesquisa" o value="Digite o nome do símbolo"/>
+      <div id='botoes_alterar'>
+	      <img src="../static/src/img/pesquisa.png" onclick='mostrar_simb(document.getElementById("pesquisa").value)' title="Pesquisar" width="24" height="24"/>
+    	  <img src="../static/src/img/trocar.jpg" onclick='trocar_simbolo(document.getElementById("pesquisa").value)' title="Trocar Símbolo" width="23" height="23"/>
+          <img src="../static/src/img/remover.png" onclick='remover_simbolo()' title="Remover Símbolo Atual" width="23" height="23"/>
+      </div>
+      <div id='pictograma'>
+      
+      </div>
+      <button id="b_editar" onclick='mudar_simbolo()'><img src='../static/src/img/_edit.png' width='14' height='14'/> Alterar</button></form>
+      <button id="b_cancelar" onclick='cancelar_alteracao()'><img src='../static/src/img/_cancel.png' width='14' height='14'/> Cancelar</button></form>
+      </div>  
+      <div id="bottom">
+      <div style="height: 10px;">
+      	<div id="barra2"></div>
+      </div>
+      <div id="teclado_container">
+      		<div id="sombra"></div>
+            <div id="teclado">
+              <button id="b1" class="botao">1</button>
+                <button id="b2" class="botao">2</button>
+                <button id="b3" class="botao">3</button>
+                <button id="b4" class="botao">4</button>
+                <button id="b5" class="botao">5</button>
+                <button id="b26" class="botao">6</button>
+                <button id="b27" class="botao">7</button>
+                <button id="b28" class="botao">8</button>
+                <button id="b29" class="botao">9</button>
+                <button id="b30" class="botao">0</button>
+            	<br>
+                <button id="b6" class="botao">Q</button>
+                <button id="b7" class="botao">W</button>
+                <button id="b8" class="botao">E</button>
+                <button id="b9" class="botao">R</button>
+                <button id="b10" class="botao">T</button>
+                <button id="b31" class="botao">Y</button>
+                <button id="b32" class="botao">U</button>
+                <button id="b33" class="botao">I</button>
+                <button id="b34" class="botao">O</button>
+                <button id="b35" class="botao">P</button>
+                <br>
+                <button id="b11" class="botao">A</button>
+                <button id="b12" class="botao">S</button>
+                <button id="b13" class="botao">D</button>
+                <button id="b14" class="botao">F</button>
+                <button id="b15" class="botao">G</button>
+                <button id="b36" class="botao">H</button>
+                <button id="b37" class="botao">J</button>
+                <button id="b38" class="botao">K</button>
+                <button id="b39" class="botao">L</button>
+                <button id="b40" class="botao">Ç</button>
+            	<br>
+                <button id="b16" class="botao">Z</button>
+                <button id="b17" class="botao">X</button>
+                <button id="b18" class="botao">C</button>
+                <button id="b19" class="botao">V</button>
+                <button id="b20" class="botao">B</button>
+                <button id="b41" class="botao">N</button>
+                <button id="b42" class="botao">M</button>
+                <button id="b43" class="botao"><</button>
+                <button id="b44" class="botao">></button>
+                <button id="b45" class="botao">,</button>
+            	<br>
+                <button id="b21" class="botao">(</button>
+                <button id="b22" class="botao">)</button>
+                <button id="b23" class="botao">?</button>
+                <button id="b24" class="botao">!</button>
+                <button id="b25" class="botao">@</button>
+                <button id="b46" class="botao">^</button>
+                <button id="b47" class="botao">OK</button>
+                <button id="b48" class="botao">DEL</button>
+                <button id="b49" class="botao">ESP</button>
+                <button id="b50" class="botao">ENT</button>
+           </div>
+           <div id="acentos">
+               <button id="b51" class="botao"></button>
+               <button id="b52" class="botao"></button>
+               <button id="b53" class="botao"></button>
+               <button id="b54" class="botao"></button>
+               <button id="b55" class="botao"></button>
+           </div>
+         </div>
+         <div class='opcoes'><label id="teclado_enabler"><input id="teclado_checkbox" onchange="teclado_assistivo()" type="checkbox" checked="checked" value="Ativar teclado" />&nbsp;Ativar Teclado</label>
+$if frase != "" and flag == 1:
+    <button id="b_Erro" onclick="reportErro()"><img src='http://data-ilustrado.rhcloud.com/wp-content/uploads/2014/06/bug.png' width='15' height='15'/> Reportar erro</button>
+    <button id="b_Imprimir" onclick="imprimir()"><img src='http://data-ilustrado.rhcloud.com/wp-content/uploads/2014/06/imprimir.png' width='17' height='17'/> Imprimir</button>
+    <button id="b_salvar" onclick="salvar_simbolos()"><img src='http://ca2ju-ilustrado.rhcloud.com/static/src/img/_salvar.png' width='17' height='17'/> Salvar</button></div>
+         </div>
+         </div>
+     </div>
+         <div id='copyright'> © Todos os direitos reservados</div>  
+    </body>
+</html>

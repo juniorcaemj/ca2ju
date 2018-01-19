@@ -1,0 +1,83 @@
+(dp0
+VMenina mercado não dinheiro
+p1
+(lp2
+VMenina
+p3
+aVmercado
+p4
+aVnão
+p5
+aVdinheiro
+p6
+asVSente perto porque conversar você.
+p7
+(lp8
+VSente
+p9
+aVperto
+p10
+aVporque
+p11
+aVconversar
+p12
+aVvocê
+p13
+asVA menina menina a menina a
+p14
+(lp15
+Vmenina
+p16
+aVmenina
+p17
+asVA menina foi para o mercado mas não tinha dinheiro
+p18
+(lp19
+Vmenina
+p20
+aVmercado
+p21
+aVnão
+p22
+aVdinheiro
+p23
+asVSente aqui do meu lado porque quero conversar com você.
+p24
+(lp25
+VSente
+p26
+aVaqui
+p27
+aVporque
+p28
+aVconversar
+p29
+aVvocê
+p30
+asVMe azul amarela pintar bandeira.
+p31
+(lp32
+VMe
+p33
+aVazul
+p34
+aVamarela
+p35
+aVpintar
+p36
+aVbandeira
+p37
+asVMe dê tinta azul e amarela para pintar a bandeira.
+p38
+(lp39
+VMe
+p40
+aVazul
+p41
+aVamarela
+p42
+aVpintar
+p43
+aVbandeira
+p44
+as.
