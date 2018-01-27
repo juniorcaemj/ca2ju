@@ -45,7 +45,7 @@ urls = (
 )
 
 #render = web.template.render('app-root/repo/wsgi/templates/')
-render = web.template.render('/opt/app-root/src/wsgi/templates/')
+render = web.template.render('wsgi/templates/')
 
 '''
 #dicionario contendo informacao do tipo -> palavra:[nome,[classe_de_palavra],[sinonimos],[entidades],...]
@@ -73,15 +73,15 @@ file6 = 'app-root/repo/wsgi/static/arq_figs_wordent_Pro.pkl'
 f_erro1 = 'app-root/repo/wsgi/static/erros.txt'
 f_erro2 = 'app-root/repo/wsgi/static/errosPro.txt' '''
 
-file1 = '/opt/app-root/src/wsgi/static/info.pkl'
-file2 = '/opt/app-root/src/wsgi/static/cInfo.pkl'
-file3 = '/opt/app-root/src/wsgi/static/arq_figs.pkl'
-file4 = '/opt/app-root/src/wsgi/static/arq_figs_wordent.pkl'
-file5 = '/opt/app-root/src/wsgi/static/arq_figs_Pro.pkl'
-file6 = '/opt/app-root/src/wsgi/static/arq_figs_wordent_Pro.pkl'
+file1 = 'wsgi/static/info.pkl'
+file2 = 'wsgi/static/cInfo.pkl'
+file3 = 'wsgi/static/arq_figs.pkl'
+file4 = 'wsgi/static/arq_figs_wordent.pkl'
+file5 = 'wsgi/static/arq_figs_Pro.pkl'
+file6 = 'wsgi/static/arq_figs_wordent_Pro.pkl'
 
-f_erro1 = 'app-root/repo/wsgi/static/erros.txt'
-f_erro2 = 'app-root/repo/wsgi/static/errosPro.txt'
+f_erro1 = 'wsgi/static/erros.txt'
+f_erro2 = 'wsgi/static/errosPro.txt'
 
 arq = open(file1,'rb')
 arq2 = open(file2,'rb')
