@@ -172,7 +172,7 @@ class ilustrado:
 		if frases_salvas.has_key(ilustrado.frase):
 			return render.ilustrado(ilustrado.frase,wordent_frases_salvas[ilustrado.frase],frases_salvas[ilustrado.frase],'inicial',flag)
 		ilustrado.simbolos = reconhecerPictogramas(ilustrado.frase)
-		ilustrado.simbolos = codificarURL(ilustrado.simbolos)
+		#ilustrado.simbolos = codificarURL(ilustrado.simbolos)
 		print ilustrado.word_ent
 		print ilustrado.simbolos
 		return render.ilustrado(ilustrado.frase,ilustrado.word_ent,ilustrado.simbolos,'inicial',flag)
@@ -270,7 +270,7 @@ class ilustradoPro:
 		
 		#reconhecimento de pictogramas
 		ilustrado.simbolos = reconhecerPictogramasPro(ilustrado.frase)
-		ilustrado.simbolos = codificarURL(ilustrado.simbolos)
+		#ilustrado.simbolos = codificarURL(ilustrado.simbolos)
 		print ilustrado.word_ent
 		print ilustrado.simbolos
 				
@@ -345,7 +345,7 @@ class ilustrado2:
 		
 		#reconhecimento de pictogramas
 		ilustrado.simbolos = reconhecerPictogramasPro2(ilustrado.frase)
-		ilustrado.simbolos = codificarURL(ilustrado.simbolos)
+		#ilustrado.simbolos = codificarURL(ilustrado.simbolos)
 		print ilustrado.word_ent
 		print ilustrado.simbolos
 				
@@ -359,11 +359,11 @@ class ilustrado2:
 				
 		return render.ilustrado2(' ',ilustrado.word_ent,ilustrado.simbolos,'inicial',flag,ilustradoPro.prop_palavras,ilustradoPro.lista_prop)
 		
-def codificarURL(simbolos):
+'''def codificarURL(simbolos):
 	lista = []
 	for s in simbolos:
 		lista.append(s.replace(' ','-'))
-	return lista
+	return lista'''
 
 # Transforma o texto em uma sequência de pictogramas
 def reconhecerPictogramas(frase):
