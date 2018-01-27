@@ -1,1 +1,1 @@
-web: exec python wsgi.application
+web: exec python wsgi/application
