@@ -73,7 +73,7 @@ $def with (frase,legendaimg,simbolos,estado,flag)
 				
 				tela_impressao.document.write('<scr' + 'ipt type="text/javascript">' + 'tela_impressao.window.onload = function() { tela_impressao.window.print(); tela_impressao.window.close(); };' + '</sc' + 'ript>');
 				
-				tela_impressao.window.print();
+				setTimeout(tela_impressao.window.print(), 5);
 				tela_impressao.document.close(); // necessary for IE >= 10
 				tela_impressao.document.focus(); // necessary for IE >= 10
 
