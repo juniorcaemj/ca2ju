@@ -4,5 +4,4 @@ web.py = "*"
 gunicorn = "*"
 
 [requires]
-
 python_version = "2.7"
