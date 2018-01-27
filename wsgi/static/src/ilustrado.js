@@ -269,7 +269,7 @@
 		function mudar_simbolo(){
 			if (permissao == true){
 				if (id_edit != -1){
-					document.getElementById("img_"+id_edit).src = "http://data-ilustrado.rhcloud.com/wp-content/uploads/2014/06/"+retira_acentos(novo_nome);
+					document.getElementById("img_"+id_edit).src = "https://raw.github.com/juniorcaemj/ca2ju-pictogramas/master/pictogramas/"+retira_acentos(novo_nome);
 					indice = 0;
 					document.getElementById('b_salvar').style.visibility = 'visible'; //mostrar o botao de salvar
 				}
@@ -305,7 +305,7 @@
 			p = p.toLowerCase();
 			if (palavras[p] != null){
 				permissao = true;
-				document.getElementById('pictograma').innerHTML = "<img id=\"simb_atual\" src=\"http://data-ilustrado.rhcloud.com/wp-content/uploads/2014/06/"+retira_acentos(palavras[p])+"\" width=\"100\" height=\"100\" align=\"middle\"/>";
+				document.getElementById('pictograma').innerHTML = "<img id=\"simb_atual\" src=\"https://raw.github.com/juniorcaemj/ca2ju-pictogramas/master/pictogramas/"+retira_acentos(palavras[p])+"\" width=\"100\" height=\"100\" align=\"middle\"/>";
 				nome = palavras[p];
 				nome_original = nome;
 				novo_nome = nome;
@@ -321,10 +321,10 @@
 				indice = indice+1;
 				if (palavras[p+"_"+indice] != null){
 					novo_nome = nome.substr(0,(nome.length)-4)+"_"+indice+".png";
-					document.getElementById("simb_atual").src = "http://data-ilustrado.rhcloud.com/wp-content/uploads/2014/06/"+novo_nome;
+					document.getElementById("simb_atual").src = "https://raw.github.com/juniorcaemj/ca2ju-pictogramas/master/pictogramas/"+novo_nome;
 				}else{
 					indice = 0;
-					document.getElementById("simb_atual").src = "http://data-ilustrado.rhcloud.com/wp-content/uploads/2014/06/"+nome_original.substr(0,(nome_original.length)-4)+".png";
+					document.getElementById("simb_atual").src = "https://raw.github.com/juniorcaemj/ca2ju-pictogramas/master/pictogramas/"+nome_original.substr(0,(nome_original.length)-4)+".png";
 					novo_nome = nome_original.substr(0,(nome_original.length)-4)+".png";
 				}
 			}
