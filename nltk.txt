@@ -1,2 +1,2 @@
-corpora
-stemmers
+stopwords
+rslp
