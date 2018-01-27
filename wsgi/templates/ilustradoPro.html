@@ -59,8 +59,7 @@ $def with (frase,legendaimg,simbolos,estado,flag,palavras,propriedades)
 		tela_impressao = window.open('Símbolos Pictográficos - CA2JU Ilustrado');
 
 		tela_impressao.document.write(conteudo);
-		tela_impressao.window.print();
-		tela_impressao.window.close();
+		tela_impressao.document.write('<scr' + 'ipt type="text/javascript">' + 'window.onload = function() { window.focus(); window.print(); window.close(); };' + '</sc' + 'ript>');
 	}
 	
 	var entidades = ["Organização","Pessoa","Data"];
